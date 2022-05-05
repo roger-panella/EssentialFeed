@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E24E114B28236CD5005FC4F3 /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E114A28236CD5005FC4F3 /* RemoteFeedLoader.swift */; };
 		E292F54728219A5500D4D861 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E292F54628219A5500D4D861 /* AppDelegate.swift */; };
 		E292F54928219A5500D4D861 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E292F54828219A5500D4D861 /* SceneDelegate.swift */; };
 		E292F54B28219A5500D4D861 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E292F54A28219A5500D4D861 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E24E114A28236CD5005FC4F3 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 		E292F54328219A5500D4D861 /* EssentialFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E292F54628219A5500D4D861 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E292F54828219A5500D4D861 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E24E114928236CC3005FC4F3 /* FeedAPI */ = {
+			isa = PBXGroup;
+			children = (
+				E24E114A28236CD5005FC4F3 /* RemoteFeedLoader.swift */,
+			);
+			path = FeedAPI;
+			sourceTree = "<group>";
+		};
 		E292F53A28219A5500D4D861 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		E292F54528219A5500D4D861 /* EssentialFeed */ = {
 			isa = PBXGroup;
 			children = (
+				E24E114928236CC3005FC4F3 /* FeedAPI */,
 				E292F57628219A8C00D4D861 /* FeedFeature */,
 				E292F54628219A5500D4D861 /* AppDelegate.swift */,
 				E292F54828219A5500D4D861 /* SceneDelegate.swift */,
@@ -276,6 +287,7 @@
 				E292F54B28219A5500D4D861 /* ViewController.swift in Sources */,
 				E292F54728219A5500D4D861 /* AppDelegate.swift in Sources */,
 				E292F57A28219AB100D4D861 /* FeedLoader.swift in Sources */,
+				E24E114B28236CD5005FC4F3 /* RemoteFeedLoader.swift in Sources */,
 				E292F54928219A5500D4D861 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
