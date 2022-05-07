@@ -43,10 +43,16 @@ class RemoteFeedLoaderTests: XCTestCase {
 
         var capturedErrors: [RemoteFeedLoader.Error] = []
         sut.load { capturedErrors.append($0) }
-
-        client.complete(withStatusCode: 400)
         
-        XCTAssertEqual(capturedErrors, [.invalidData])
+        let testStatusCodes = [199, 201, 300, 400, 500]
+
+        testStatusCodes.enumerated().forEach {
+            client.complete(withStatusCode: $1, at: $0)
+            XCTAssertEqual(capturedErrors, [.invalidData])
+            
+            var capturedErrors: [RemoteFeedLoader.Error] = []
+            sut.load { capturedErrors.append($0) }
+        }
     }
     
     // MARK: - Helpers
