@@ -59,6 +59,14 @@ class URLSessionHTTPClientTests: XCTestCase {
     func test_getFromURL_failsOnAllNilValues() {
         XCTAssertNotNil(resultErrorFor(data: nil, response: nil, error: nil))
     }
+
+    // MARK: - Helpers
+    
+    private func makeSUT(file: StaticString = #file, line: UInt = #line) -> URLSessionHTTPClient {
+        let sut = URLSessionHTTPClient()
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return sut
+    }
     
     private func resultErrorFor(data: Data?, response: URLResponse?, error: Error?, file: StaticString = #file, line: UInt = #line) -> Error? {
         URLProtocolStub.stub(data: data, response: response, error: error)
@@ -78,12 +86,6 @@ class URLSessionHTTPClientTests: XCTestCase {
         }
         wait(for: [exp], timeout: 1.0)
         return receivedError
-    }
-    
-    private func makeSUT(file: StaticString = #file, line: UInt = #line) -> URLSessionHTTPClient {
-        let sut = URLSessionHTTPClient()
-        trackForMemoryLeaks(sut, file: file, line: line)
-        return sut
     }
     
     private func anyURL() -> URL {
