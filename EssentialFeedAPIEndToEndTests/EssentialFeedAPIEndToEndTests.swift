@@ -15,7 +15,6 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
             XCTAssertEqual(items[5], expectedItem(at: 5))
             XCTAssertEqual(items[6], expectedItem(at: 6))
             XCTAssertEqual(items[7], expectedItem(at: 7))
-            XCTAssertEqual(items[8], expectedItem(at: 8))
             
             items.enumerated().forEach { (index, item) in
                 XCTAssertEqual(item, expectedItem(at: index))
@@ -50,12 +49,9 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
     }
     
     private func expectedItem(at index: Int) -> FeedItem {
-        let feedItems = [
-            FeedItem(id: id(at: index), description: description(at: index), location: location(at: index), imageURL: image(at: index))
-        ]
-        return feedItems[index]
+        return FeedItem(id: id(at: index), description: description(at: index), location: location(at: index), imageURL: image(at: index))
     }
-    
+
     private func id(at index: Int) -> UUID {
         return UUID(uuidString: [
             "73A7F70C-75DA-4C2E-B5A3-EED40DC53AA6",
